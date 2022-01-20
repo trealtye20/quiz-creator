@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const db = require("../config/connection");
 const { Quiz, User } = require("../models");
@@ -71,11 +71,15 @@ db.once("open", async () => {
   console.log(`****** user data inserted- \n ${users}`);
 
   console.log("******* data all seeded********");
-  
-  const userData = await User.findOne({_id: mongoose.Types.ObjectId("61e9a24b600cab3b105a265d")});
 
-  console.log(userData)
-  
+  let userData = await User.find();
+
+  console.log(userData);
+
+  userData = await User.findOne(userData[0]._id);
+  userData = await User.findOne({ _id: "61e9b4f09bf2710c847b894b" });
+
+  console.log(userData);
 
   process.exit();
 });
