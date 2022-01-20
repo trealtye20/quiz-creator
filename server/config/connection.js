@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/quizcreator', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/quizcreator', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
