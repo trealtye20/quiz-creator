@@ -71,8 +71,10 @@ db.once("open", async () => {
   console.log(`****** user data inserted- \n ${users}`);
 
   console.log("******* data all seeded********");
+
+  console.log(users._id);
   
-  const userData = await User.findOne({_id: mongoose.Types.ObjectId("61e9a24b600cab3b105a265d")});
+  const userData = await User.findOne({_id: users._id});
 
   console.log(userData)
   
