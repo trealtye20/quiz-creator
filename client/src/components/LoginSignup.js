@@ -1,12 +1,12 @@
 import React from 'react';
-
-
+// import '../styles/LoginSignup.css'
 import {Button, Form} from 'react-bootstrap';
+
 
 function LoginSignup () {
     return (
       
-        <Form className="form-size"> 
+        <Form id="form-size"> 
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
     <Form.Control type="email" placeholder="Enter email" />
