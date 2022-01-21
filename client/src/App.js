@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/Navigation.js";
 import Header from "./components/Header"
 
 function App() {
@@ -7,7 +7,6 @@ function App() {
     <div>
       <Navigation />
       <Header />
-      <h1>Welcome</h1>
       
     </div>
   );

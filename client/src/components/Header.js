@@ -3,9 +3,9 @@ import '../styles/Header.css';
 
 function Header() {
   return (
-    <header className="head">
+    <div>
       <h1>Welcome to the quiz creator</h1>
-    </header>
+    </div>
   );
 }
 
