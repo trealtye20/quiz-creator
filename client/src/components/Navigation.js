@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/Navbar.css';
-import { Navbar, NavDropdown, Container } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 
 
-function Nav() {
+function Navigation() {
   return (
       <Navbar bg="light" expand="lg">
   <Container>
@@ -27,4 +27,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Navigation;
