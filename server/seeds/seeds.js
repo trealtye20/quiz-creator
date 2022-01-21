@@ -27,6 +27,7 @@ db.once("open", async () => {
           answer: "500ft",
         },
       ],
+      // highScores
     },
 
     {
