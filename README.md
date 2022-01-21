@@ -12,7 +12,6 @@
 ## **Description**
 
 ## **Installation**
-  
 
 ## **Usage**
 
@@ -23,7 +22,7 @@
 
 
 ## **Questions**
-Please contact me at Katieshake27@gmail.com with any questions.
+Please contact us with any questions.
 
 Visit my gitHub page at https://github.com/kgendaszek!
 
