@@ -84,16 +84,8 @@ db.once("open", async () => {
   userData = await User.findOne(userAllData[0]._id);
   console.log(`\nUser.findOne(userAllData[0]._id): ${userData}`);
 
-<<<<<<< HEAD
-  console.log("******* data all seeded********");
-
-  console.log(users._id);
-  
-  const userData = await User.findOne({_id: users._id});
-=======
   userData = await User.findOne(userAllData[1]._id);
   console.log(`\nUser.findOne(userAllData[1]._id): ${userData}`);
->>>>>>> 1b619be61e7dbac1221a6d37cdd25833267fa0d3
 
   const userDataQuiz = await User.findOne(userAllData[0]._id).populate("quizzes");
   console.log(`****** user date with quizzes: ${userDataQuiz}`);
