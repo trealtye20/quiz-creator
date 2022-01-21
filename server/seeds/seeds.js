@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const db = require("../config/connection");
 const { Quiz, User } = require("../models");
@@ -53,31 +53,51 @@ db.once("open", async () => {
 
   console.log(`****** quiz data inserted- \n ${quizzes}`);
 
-  const users = await User.insertMany([
+  const userOne = await User.create(
     {
       userName: "Chris",
       email: "Chriscodes@gmail.com",
       password: "password",
-      quizzes: ["61e999551b2a780e2c440aea"],
+      quizzes: [quizzes[0]._id],
     },
+  );
+  const userTwo = await User.create(
     {
       userName: "Katie",
       email: "Katiecodes@gmail.com",
       password: "password",
-      quizzes: ["61e999551b2a780e2c440aee"],
+      quizzes: [quizzes[1]._id],
     },
-  ]);
+  );
 
-  console.log(`****** user data inserted- \n ${users}`);
+  console.log(`\n****** user one inserted- \n ${userOne}`);
+  console.log(`\n****** user two inserted- \n ${userTwo}`);
 
+  console.log("******* data all seeded ********");
+
+  let userAllData = await User.find({});
+
+  console.log(`userAllData: ${userAllData}`);
+
+  let userData;
+
+  userData = await User.findOne(userAllData[0]._id);
+  console.log(`\nUser.findOne(userAllData[0]._id): ${userData}`);
+
+<<<<<<< HEAD
   console.log("******* data all seeded********");
 
   console.log(users._id);
   
   const userData = await User.findOne({_id: users._id});
+=======
+  userData = await User.findOne(userAllData[1]._id);
+  console.log(`\nUser.findOne(userAllData[1]._id): ${userData}`);
+>>>>>>> 1b619be61e7dbac1221a6d37cdd25833267fa0d3
 
-  console.log(userData)
-  
+  const userDataQuiz = await User.findOne(userAllData[0]._id).populate("quizzes");
+  console.log(`****** user date with quizzes: ${userDataQuiz}`);
+  // console.log(userData);
 
   process.exit();
 });
