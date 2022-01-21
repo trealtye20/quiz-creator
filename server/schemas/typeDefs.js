@@ -29,7 +29,7 @@ const typeDefs = gql`
     answer: String
   }
   type Mutation {
-    addQuiz(title: String!, questions: Input_Question!, alottedTime: Int!): Quiz
+    addQuiz(title: String!, questions: Input_Question!, allottedTime: Int!): Quiz
     addUser(userName: String!, email: String!, password: String!, quizzes: [ID]): User
   }
 `;
