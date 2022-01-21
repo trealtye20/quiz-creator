@@ -7,17 +7,32 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   Query: {
     user: async (parent, args, context) => {
-      console.log(args);
-      const user = await User.findOne({ _id: args._id }).populate("quizzes");
-      console.log(user);
+      console.log("Resolver: User Query");
+      const user = await User.findOne({ _id: args._id }).populate("quizzes")
       return user;
     },
-      quiz: async (parent, args, context) => {
-        console.log(args);
-        const quiz = await Quiz.findOne({_id: args._id});
-        console.log(quiz);
-        return quiz;
-      }
+    quiz: async (parent, args, context) => {
+      console.log("Resolver: Quiz Query");
+      const quiz = await Quiz.findOne({ _id: args._id });
+      return quiz;
+    }
+  },
+  Mutation: {
+    addQuiz: async (parent, args) => {
+      console.log(args) // TODO delete after testing
+      console.log("Resolver: AddQuiz Mutation");
+      const quiz = await Quiz.create(args);
+      console.log(quiz) // TODO delete after testing
+      return quiz;
+    },
+    addUser: async (parent, args) => {
+      console.log(args) // TODO delete after testing
+      console.log("Resolver: AddUser Mutation");
+      let user = await User.create(args);
+      user = await User.findOne({_id: user._id}).populate("quizzes");
+      console.log(user) // TODO delete after testing
+      return user;
+    }
   },
 };
 

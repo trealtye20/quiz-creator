@@ -23,6 +23,15 @@ const typeDefs = gql`
     user(_id: ID): User
     quiz(_id: ID): Quiz
   }
+  input Input_Question {
+    q: String,
+    options: [String],
+    answer: String
+  }
+  type Mutation {
+    addQuiz(title: String!, questions: Input_Question!, alottedTime: Int!): Quiz
+    addUser(userName: String!, email: String!, password: String!, quizzes: [ID]): User
+  }
 `;
 
 module.exports = typeDefs;
