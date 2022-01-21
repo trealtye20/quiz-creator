@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import '../styles/Footer.css'
 
-
-
-function Footer () {
-    return (
-
-        <h1>testing footer</h1>
-    )
-
+function Footer() {
+  return (
+    <footer class="footer">
+      <h1>Quiz Creator™ </h1>
+    </footer>
+  );
 }
+
+export default Footer;
