@@ -1,14 +1,14 @@
 import React from 'react';
-// import '../styles/LoginSignup.css'
-import {Button, Form} from 'react-bootstrap';
+import '../styles/LoginSignup.css'
+import {Button, Form, Card, Container, Row} from 'react-bootstrap';
 
 
 function LoginSignup () {
     return (
-      
-        <Form id="form-size" 
-        style={{margin: "200px"}}
-        > 
+      <Container>
+        <Row>
+      <Card className='col-md-6 mx-auto p-3'>
+        <Form id="form-size" > 
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
     <Form.Control type="email" placeholder="Enter email" />
@@ -28,6 +28,10 @@ function LoginSignup () {
     Submit
   </Button>
 </Form>
+</Card>
+</Row>
+</Container>
+
 
     )
 }
