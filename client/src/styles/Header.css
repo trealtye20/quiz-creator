@@ -10,3 +10,16 @@
   color: white;
   font-size: 3rem;
 } */
+
+.head h1 {
+  text-align: center;
+  background-image: url("../img/questionStar.gif");
+  background-size: cover;
+  min-height: 10vh;
+  background-position: center;
+  color: black;
+}
+
+div {
+  
+}
