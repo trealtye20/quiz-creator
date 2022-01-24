@@ -1,0 +1,6 @@
+.appPage {
+    background-image: url('../img/question.gif');
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+}
