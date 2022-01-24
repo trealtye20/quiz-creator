@@ -3,7 +3,7 @@ import '../styles/Footer.css'
 
 function Footer() {
   return (
-    <footer class="footer">
+    <footer className="footer">
       <h1>Quiz Creator™ </h1>
     </footer>
   );

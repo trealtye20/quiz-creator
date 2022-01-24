@@ -1,50 +1,39 @@
 import { gql } from '@apollo/client';
 
-export const LOGIN = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
+export const ADD_QUIZ = gql`
+  mutation addQuiz($title: String!, $questions: Input_Questions!, $alottedTime: Int!) {
+    addQuiz(title: $title, questions: $questions, alottedTime: $allotedTime) {
       token
-      user {
-        _id
-      }
-    }
-  }
-`;
-
-export const ADD_ORDER = gql`
-  mutation addOrder($products: [ID]!) {
-    addOrder(products: $products) {
-      purchaseDate
-      products {
-        _id
-        name
-        description
-        price
-        quantity
-        category {
-          name
-        }
+      user{
+        userName
+        email
+        password
       }
     }
   }
 `;
 
 export const ADD_USER = gql`
-  mutation addUser(
-    $firstName: String!
-    $lastName: String!
-    $email: String!
-    $password: String!
-  ) {
-    addUser(
-      firstName: $firstName
-      lastName: $lastName
-      email: $email
-      password: $password
-    ) {
+  mutation addUser($userName: String!, $email: String!, $password: String!, $quizzes: [ID]){
+    addUser(userName: $userName, email: $email, password: $password, quizzes: $quizzes){
       token
-      user {
-        _id
+      user{
+        userName
+        email
+        password
+      }
+    }
+  }
+`;
+
+export const LOGIN = gql`
+  mutation login($email: String!, $password: String!){
+    login(email: $email, password: $password){
+      token
+      user{
+        userName
+        email
+        password
       }
     }
   }

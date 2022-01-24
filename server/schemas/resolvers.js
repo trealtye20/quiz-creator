@@ -14,6 +14,11 @@ const resolvers = {
       console.log("Resolver: Quiz Query");
       const quiz = await Quiz.findOne({ _id: args._id });
       return quiz;
+    },
+    users: async (parent, args, context) => {
+      console.log("Resolver: All Users Query");
+      const users = await User.find({}).populate("quizzes");
+      return users;
     }
   },
   Mutation: {
