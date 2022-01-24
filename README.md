@@ -1,37 +1,29 @@
-# quiz-creator
-## **Table of Contents**
-* [Description](#Description)
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [Contributing](#Contributing)
-* [Questions](#Questions)
-* [Tests](#Tests)
-* [Website](#Website)
-* [License](#License)
+# Quiz Creator! #
 
-## **Description**
+ ## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributors](#contributors)
+* [Questions](#questions)
 
-## **Installation**
+## Description
 
-## **Usage**
+## Install
+Make sure to clone the repo, then in the root directory run npm install (mongoose,express).
+## Usage
 
-## **Contributing**
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Contributors
+Christopher Tangarife
+## Questions
+If you have any questions about the application contact me directly at Christangarife95@gmailcom 
+# Contact
+Christangarife95@gmail.com 
+# Username
+Check out my other work on [Github](https://github.com/ChrisCodes54)
+# Screenshots 
 
-
-[Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)
-
-
-## **Questions**
-Please contact us with any questions.
-
-Visit my gitHub page at https://github.com/kgendaszek!
-
-
-
-## **Website**
-
-
-## **License**
-### [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-[MIT license](https://opensource.org/licenses/MIT)
+![Quiz Creator Login/Logout](images/socialnetworkapi.PNG)
