@@ -1,18 +1,12 @@
 import React from "react";
-
-import Header from "./components/Header"
-import Footer from './components/Footer';
-import LoginSignup  from './components/LoginSignup';
+import Landingpage from "./Pages/Landingpage";
 
 
 function App() {
   return (
     <div>
-      <Header />
-      <LoginSignup />
-      <Footer />
       
-      
+      <Landingpage/>
       
     </div>
   );
