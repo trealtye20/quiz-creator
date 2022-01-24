@@ -1,6 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
-const { Quiz } = require("../models")
+const { User, Quiz } = require("../models");
 const { signToken } = require("../utils/auth");
 // const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -28,10 +27,30 @@ const resolvers = {
     addUser: async (parent, args) => {
       console.log(args) // TODO delete after testing
       console.log("Resolver: AddUser Mutation");
-      let user = await User.create(args);
-      user = await User.findOne({_id: user._id}).populate("quizzes");
+      const user = await User.create(args);
+      const token = signToken(user);
+      user.password = "REDACTED"
       console.log(user) // TODO delete after testing
-      return user;
+      return { token, user };
+    },
+    login: async (parent, {email, password}) => {
+      console.log({email, password}) // TODO delete after testing
+      console.log("Resolver: Login Mutation");
+      const user = await User.findOne({email})
+
+      if (!user) {
+        throw new AuthenticationError('No user with this email found!');
+      }
+
+      const passwordCheck = await user.isCorrectPassword(password);
+
+      if (!passwordCheck) {
+        throw new AuthenticationError("Incorrect Password!");
+      }
+
+      const token = signToken(user);
+      user.password = "REDACTED"
+      return {token, user};
     }
   },
 };

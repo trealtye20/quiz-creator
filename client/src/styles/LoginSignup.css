@@ -2,6 +2,11 @@
     width: 50px;
 } */
 
-.card{
-    margin-top: 13% !important;
+.card {
+  margin-top: 13% !important;
+}
+
+#buttons {
+  display: flex;
+  gap: 10px;
 }
