@@ -8,6 +8,10 @@ const typeDefs = gql`
     password: String
     quizzes: [Quiz]
   }
+  type Auth {
+    token: ID!
+    user: User
+  }
   type Quiz {
     title: String
     questions: [Question]
@@ -30,7 +34,9 @@ const typeDefs = gql`
   }
   type Mutation {
     addQuiz(title: String!, questions: Input_Question!, allottedTime: Int!): Quiz
-    addUser(userName: String!, email: String!, password: String!, quizzes: [ID]): User
+    # Sign up and log in
+    addUser(userName: String!, email: String!, password: String!, quizzes: [ID]): Auth
+    login(email: String!, password: String!): Auth
   }
 `;
 
