@@ -1,20 +1,21 @@
 import React from "react";
+import Landingpage from "./Pages/Landingpage";
+import { ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 
-import Header from "./components/Header"
-import Footer from './components/Footer';
-import LoginSignup  from './components/LoginSignup';
-
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache
+});
 
 function App() {
   return (
+    <ApolloProvider client={client}>
     <div>
-      <Header />
-      <LoginSignup />
-      <Footer />
       
-      
+      <Landingpage/>
       
     </div>
+    </ ApolloProvider>
   );
 }
 
