@@ -9,6 +9,11 @@ function LoginSignup () {
         <Row>
       <Card className='col-md-6 mx-auto p-3'>
         <Form id="form-size" > 
+
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>Username</Form.Label>
+    <Form.Control type="username" placeholder="Enter username" />
+  </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
     <Form.Control type="email" placeholder="Enter email" />
@@ -24,9 +29,15 @@ function LoginSignup () {
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
+  <div id='buttons'>
   <Button variant="primary" type="submit">
-    Submit
+    Log-In
   </Button>
+
+  <Button variant="primary" type="submit">
+    Sign-Up
+  </Button>
+</div>
 </Form>
 </Card>
 </Row>
