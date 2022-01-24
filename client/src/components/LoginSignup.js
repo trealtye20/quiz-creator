@@ -44,7 +44,7 @@ function LoginSignup() {
   return (
     <Container>
       <Row>
-        <Card className="col-md-6 mx-auto p-3">
+        <Card className="col-md-6 mx-auto p-3" border="primary">
           <Form id="form-size">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Username</Form.Label>
