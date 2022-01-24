@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation.js";
 import Header from "./components/Header"
 import Footer from './components/Footer';
 import LoginSignup  from './components/LoginSignup';
+import Homepage from './components/Homepage';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <Footer />
       <Navigation />
       
-      
+
     </div>
   );
 }
