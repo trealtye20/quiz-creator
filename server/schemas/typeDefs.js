@@ -26,6 +26,7 @@ const typeDefs = gql`
   type Query {
     user(_id: ID): User
     quiz(_id: ID): Quiz
+    users: [User]
   }
   input Input_Question {
     q: String,
