@@ -14,7 +14,7 @@ function Header() {
         <Nav>
           <Nav.Link href="#home" id="text">Home</Nav.Link>
           <Nav.Link href="#features" id="text" >Login</Nav.Link>
-          <Nav.Link href="#pricing" id="text" >Log Out</Nav.Link>
+          <Nav.Link href="#pricing" id="text" onClick={(e) => {console.log(e.target); AuthService.logout();}}>Log Out</Nav.Link>
         </Nav>
       </Navbar>
     </div>

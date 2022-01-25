@@ -3,16 +3,14 @@ import Header from '../components/Header';
 import LoginSignup from "../components/LoginSignup";
 import Users from "../components/Users";
 import Footer from "../components/Footer";
+import Mainfeed from "../Pages/Mainfeed";
 
 const Landingpage = () => {
-
   // const profiles = data?.profiles || [];
 
   return (
     <div>
-      <Header />
-      <LoginSignup />
-      <Footer />
+      <Mainfeed />
     </div>
   );
 };
