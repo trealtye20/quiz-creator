@@ -13,6 +13,7 @@ const typeDefs = gql`
     user: User
   }
   type Quiz {
+    _id: ID
     title: String
     questions: [Question]
     highScore: Int

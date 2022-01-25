@@ -5,43 +5,45 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    user: async (parent, args, context) => {
+    user: async (args) => {
       console.log("Resolver: User Query");
       const user = await User.findOne({ _id: args._id }).populate("quizzes")
       return user;
     },
-    quiz: async (parent, args, context) => {
+    quiz: async (args) => {
       console.log("Resolver: Quiz Query");
       const quiz = await Quiz.findOne({ _id: args._id });
       return quiz;
     },
-    users: async (parent, args, context) => {
+    users: async () => {
       console.log("Resolver: All Users Query");
       const users = await User.find({}).populate("quizzes");
       return users;
     }
   },
   Mutation: {
-    addQuiz: async (parent, args) => {
-      console.log(args) // TODO delete after testing
+    addQuiz: async (parent, args, context) => {
       console.log("Resolver: AddQuiz Mutation");
+      if (!context.user){
+        return new AuthenticationError("Please login.")
+      }
       const quiz = await Quiz.create(args);
-      console.log(quiz) // TODO delete after testing
+      User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $push: { quizzes: quiz._id }}
+      )
       return quiz;
     },
     addUser: async (parent, args) => {
-      console.log(args) // TODO delete after testing
       console.log("Resolver: AddUser Mutation");
       const user = await User.create(args);
       const token = signToken(user);
       user.password = "REDACTED"
-      console.log(user) // TODO delete after testing
       return { token, user };
     },
     login: async (parent, {email, password}) => {
-      console.log({email, password}) // TODO delete after testing
       console.log("Resolver: Login Mutation");
-      const user = await User.findOne({email})
+      const user = await User.findOne({email});
 
       if (!user) {
         throw new AuthenticationError('No user with this email found!');
