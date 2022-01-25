@@ -3,6 +3,7 @@ import "../styles/LoginSignup.css";
 import { Button, Form, Card, Container, Row } from "react-bootstrap";
 import { ADD_USER, LOGIN } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import  AuthService  from "../utils/auth";
 
 function LoginSignup() {
   const [addUser, {addUserError}] = useMutation(ADD_USER);
@@ -21,7 +22,7 @@ function LoginSignup() {
         variables: {userName: username, email: email, password: password}
         }
       )
-      console.log(user);
+      AuthService.login(user.data.addUser.token);
     }
     catch(err){
       console.error(err);
@@ -35,7 +36,7 @@ function LoginSignup() {
           variables: { email: email, password: password }
         }
       )
-      console.log(user)
+      AuthService.login(user.data.login.token);
     }
     catch(err) {
       console.error(err);

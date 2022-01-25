@@ -13,6 +13,7 @@ const typeDefs = gql`
     user: User
   }
   type Quiz {
+    _id: ID
     title: String
     questions: [Question]
     highScore: Int
@@ -27,6 +28,7 @@ const typeDefs = gql`
     user(_id: ID): User
     quiz(_id: ID): Quiz
     users: [User]
+    quizzes: [Quiz]
   }
   input Input_Question {
     q: String,
