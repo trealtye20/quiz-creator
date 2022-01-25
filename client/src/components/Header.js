@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Header.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import AuthService from "../utils/auth";
 
 function Header() {
   return (
