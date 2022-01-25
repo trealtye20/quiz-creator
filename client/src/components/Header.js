@@ -2,7 +2,9 @@ import React from "react";
 import "../styles/Header.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
+
 function Header() {
+
   return (
     <div className="head">
       <h1>❓Welcome to the quiz creator❓</h1>
