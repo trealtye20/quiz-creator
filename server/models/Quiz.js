@@ -21,7 +21,7 @@ const quizSchema = new Schema({
     type: Number
   },
 
-  alottedTime: {
+  allottedTime: {
     type: Number
   }
   
