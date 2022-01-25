@@ -1,0 +1,21 @@
+Form Component
+title
+questions:
+[
+    Question Form Component
+]
+allottedTime
+description
+creator # will be filled in by login information
+
+Question Form Component
+question
+options:
+[
+    options form Component
+]
+answer # will be a number for the index of the option of the correct answer
+
+options form Component #this will just be a textbox with a checkbox next to it ?
+
+
