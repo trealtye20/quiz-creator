@@ -17,13 +17,21 @@ Make sure to clone the repo, then in the root directory run npm install (mongoos
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Contributors
+
 Christopher Tangarife
+Tyrese Exantus
+Katie Gendaszek
+Noel Ramirez
+
 ## Questions
 If you have any questions about the application contact me directly at Christangarife95@gmailcom 
 # Contact
 Christangarife95@gmail.com 
 # Username
-Check out my other work on [Github](https://github.com/ChrisCodes54)
+Check out our other work on GitHub!
+
+ https://github.com/ChrisCodes54
+ https://github.com/trealtye20
 # Screenshots 
 
 ![Quiz Creator Login/Logout](images/socialnetworkapi.PNG)
