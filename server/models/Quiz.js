@@ -25,8 +25,16 @@ const quizSchema = new Schema({
     type: Number
   },
 
-  //description
-  //creator
+  description: {
+    type: String,
+    minlength: 16,
+    maxlength: 100
+  },
+
+  creator: {
+    type: Schema.Types.ObjectId,
+    required: true
+  }
   
 });
 

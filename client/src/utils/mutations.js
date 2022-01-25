@@ -3,12 +3,17 @@ import { gql } from '@apollo/client';
 export const ADD_QUIZ = gql`
   mutation addQuiz($title: String!, $questions: Input_Questions!, $alottedTime: Int!) {
     addQuiz(title: $title, questions: $questions, alottedTime: $allotedTime) {
-      token
-      user{
-        userName
-        email
-        password
+      _id
+      title
+      questions{
+        q
+        options
+        answer
       }
+      highScore
+      allottedTime
+      description
+      creator
     }
   }
 `;
