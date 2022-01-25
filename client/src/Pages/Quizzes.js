@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/Quizzes.css";
 
 function Quizzes({ id, title, question, options, answer }) {
-  
   return (
     <div className="card col d-flex justify-content-center">
       {/* <img className="card-img" src={image} alt="Card caption" /> */}
