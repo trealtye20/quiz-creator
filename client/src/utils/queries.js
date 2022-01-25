@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const GET_USER = gql`
   query user($_id: ID) {
-    {
+    user{
       _id
       username
       email
@@ -14,7 +14,7 @@ export const GET_USER = gql`
 
 export const GET_QUIZ = gql`
   query quiz($_id: ID) {
-    {
+    quiz{
       title
       questions{
         q
@@ -28,37 +28,38 @@ export const GET_QUIZ = gql`
 `;
 
 export const GET_ALL_USERS = gql`
-  {
-    query users{
-      users{
-        _id
-        userName
-        email
-        password
-        quizzes{
-          title
-          questions{
-            q
-            options
-            answer
-          }
-          highScore
-          allottedTime
+  query users{
+    users{
+      _id
+      userName
+      email
+      password 
+      quizzes{
+        title
+        questions{
+          q
+          options
+          answer
         }
+        highScore
+        allottedTime
       }
     }
   }
 `;
 
 export const GET_ALL_QUIZZES = gql`
-  {
-    title
-    questions{
-      q
-      options
-      answer
+  query quizzes{
+    quizzes{
+      _id
+      title
+      questions{
+        q
+        options
+        answer
+      }
+      highScore
+      allottedTime
     }
-    highScore
-    allottedTime
   }
 `;
