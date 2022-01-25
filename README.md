@@ -9,10 +9,14 @@
 * [Questions](#questions)
 
 ## Description
+Quiz-Creator is the place for all quiz lovers to find quizzes and take them! With varying quizzes , users can find anything that peaks their interest and test their scores among other users!
 
 ## Install
-Make sure to clone the repo, then in the root directory run npm install (mongoose,express).
+
+Make sure to clone the repo, then in the root directory run npm install (mongoose,express,stripe,react, bootstrap).
+
 ## Usage
+
 Quiz- Creator allows for users to go to our site and take quizzes based on different categories of their liking. 
 
 ## License
