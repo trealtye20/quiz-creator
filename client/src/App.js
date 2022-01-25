@@ -3,7 +3,7 @@ import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import Header from "./components/Header"
 import Footer from './components/Footer';
 import LoginSignup  from './components/LoginSignup';
-
+import Landingpage from "./Pages/Landingpage";
 
 
 function App() {
@@ -13,14 +13,11 @@ function App() {
   })
 
   return (
-    <div>
-      <ApolloProvider client={client}>
-      
-      <Header />
-      <LoginSignup />
-      <Footer />
-      </ApolloProvider>      
-    </div>
+    <ApolloProvider client={client}>
+     <div>
+        <Landingpage/>
+      </div>
+    </ ApolloProvider>
   );
 }
 

@@ -9,43 +9,125 @@ db.once("open", async () => {
 
   const quizzes = await Quiz.insertMany([
     {
-      title: "Javascript",
+      title: "Star Wars Knowledge",
       questions: [
         {
-          q: "how tall is Chris?",
-          options: ["1ft", "2ft", "5ft"],
-          answer: "1ft",
+          q: "What species is Chewbacca?",
+          options: ["Ewok", "Twilek", "Wookie"],
+          answer: "Wookie",
         },
         {
-          q: "how tall is Katie?",
-          options: ["10ft", "20ft", "50ft"],
-          answer: "50ft",
+          q: "What color is Mace Windu's lightsaber?",
+          options: ["Red", "Yellow", "Purple"],
+          answer: "Purple",
         },
         {
-          q: "how tall is Noel?",
-          options: ["100ft", "200ft", "500ft"],
-          answer: "500ft",
+          q: "What is the name of the monster under Jaba's palace that Luke killed?",
+          options: ["Wookie", "Rancor", "Tuskan Raider"],
+          answer: "Rancor",
+        },
+        {
+          q: "What species is Jar-Jar Binks?",
+          options: ["Wookie", "Gungan", "Ewok"],
+          answer: "Gungan",
+        },
+        {
+          q: "Who is Luke's father?",
+          options: ["ObiWan", "Palpatine", "Anakin"],
+          answer: "Anakin",
         },
       ],
     },
 
     {
-      title: "CSS",
+      title: "Disney Movie Quiz",
       questions: [
         {
-          q: "how tall is Chris?",
-          options: ["1ft", "2ft", "5ft"],
-          answer: "1ft",
+          q: "What is the name of Andy's neighbor in Toy Story?",
+          options: ["Ralph", "Wilson", "Sid"],
+          answer: "Sid",
         },
         {
-          q: "how tall is Katie?",
-          options: ["10ft", "20ft", "50ft"],
-          answer: "50ft",
+          q: "Which Disney Princess sings Once Upon a Dream?",
+          options: ["Aurora", "Snow White", "Cinderella"],
+          answer: "Aurora",
         },
         {
-          q: "how tall is Noel?",
-          options: ["100ft", "200ft", "500ft"],
-          answer: "500ft",
+          q: "What does Hakuna Matata mean?",
+          options: ["I'm stressed", "It's fine", "No worries"],
+          answer: "No worries",
+        },
+        {
+          q: "What does Emperor Kuzco turn into in 'Emperor's New Groove'?",
+          options: ["Frog", "Llama", "Mouse"],
+          answer: "Llama",
+        },
+        {
+          q: "In 'Encanto' what gift does Tia Pepa have?",
+          options: ["Strength", "Visions", "Weather"],
+          answer: "Weather",
+        },
+      ],
+    },
+
+    {
+      title: "Baseball Quiz",
+      questions: [
+        {
+          q: "How many players are on a baseball team?",
+          options: ["6", "12", "9"],
+          answer: "9",
+        },
+        {
+          q: "What is another name for a baseball field?",
+          options: ["Pitch", "Diamond", "Rink"],
+          answer: "Diamond",
+        },
+        {
+          q: "What is the place the pitcher throws the ball from?",
+          options: ["Mound", "Outfield", "DugOut"],
+          answer: "Mound",
+        },
+        {
+          q: "What is the title of the person who decides on the points?",
+          options: ["Coach", "Referee", "Umpire"],
+          answer: "Umpire",
+        },
+        {
+          q: "When 'bases are loaded' how many people could potentially score?",
+          options: ["4", "3", "5"],
+          answer: "4",
+        },
+      ],
+    },
+
+    {
+      title: "History Quiz",
+      questions: [
+        {
+          q: "Who was the first European to land in North America",
+          options: ["Christopher Columbus", "Leif Erikson", "Pablo Pacaso"],
+          answer: "Leif Erikson",
+        },
+        {
+          q: "What was the first capital of the USA?",
+          options: ["Boston", "Philadelphia", "NYC"],
+          answer: "NYC",
+        },
+        {
+          q: "Who created the first American flag?",
+          options: ["Betsy Ross", "George Washington", "Paul Revere"],
+          answer: "Betsy Ross",
+        },
+        {
+          q: "When was the first US dollar printed?",
+          options: ["1800", "1776", "1862"],
+          answer: "1862",
+        },
+        {
+          q: "When did the Revolutionary War end?",
+          options: ["1776", "1783", "1800"],
+          answer: "1783",
         },
       ],
     },
