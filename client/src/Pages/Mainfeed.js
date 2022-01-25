@@ -6,6 +6,8 @@ import Quizzes from "./Quizzes";
 import Footer from "../components/Footer";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_QUIZZES } from "../utils/queries";
+//import { Cards } from "../components/Cards";
+import CardDisplay from "../components/CardDisplay";
 
 const Mainfeed = () => {
   const { loading, error, data } = useQuery(GET_ALL_QUIZZES);
@@ -13,9 +15,11 @@ const Mainfeed = () => {
   if (error){render = <h1>Error Error!</h1>}
   if (loading){render = <h1>I'm Loading!</h1>}
   else{
-    render = data.quizzes.map((app) => {
+    render = data.quizzes.map((quizData,index) => {
       return (
-        <Quizzes title={app.title}/>
+        <CardDisplay data={quizData}
+        key={index} 
+        />
       );
     })
   }
@@ -27,6 +31,6 @@ const Mainfeed = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default Mainfeed;

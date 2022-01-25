@@ -23,7 +23,10 @@ const quizSchema = new Schema({
 
   alottedTime: {
     type: Number
-  }
+  },
+
+  //description
+  //creator
   
 });
 

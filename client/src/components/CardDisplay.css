@@ -1,0 +1,12 @@
+.remove_link_colour a, a:hover, a:focus, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.unclickable{
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
