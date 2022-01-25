@@ -32,7 +32,11 @@ const resolvers = {
       if (!context.user){
         return new AuthenticationError("Please login.")
       }
-      const quiz = await Quiz.create(args);
+      const quiz = await Quiz.create(
+      {
+        args, 
+        creator: context.user._id
+      });
       User.findOneAndUpdate(
         { _id: context.user._id },
         { $push: { quizzes: quiz._id }}
