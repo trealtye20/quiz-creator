@@ -12,8 +12,8 @@ function Header() {
         </Navbar.Brand>
         <Nav>
           <Nav.Link href="#home" id="text">Home</Nav.Link>
-          <Nav.Link href="#features" id="text" >Login</Nav.Link>
-          <Nav.Link href="#pricing" id="text">Log Out</Nav.Link>
+          <Nav.Link href="#login" id="text" >Login</Nav.Link>
+          <Nav.Link href="#logout" id="text">Log Out</Nav.Link>
         </Nav>
       </Navbar>
     </div>
