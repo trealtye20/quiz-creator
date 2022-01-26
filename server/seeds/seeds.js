@@ -195,6 +195,105 @@ db.once("open", async () => {
           answer: "Upper-arm",
         },
       ],
+    },
+    {
+      title: "Animal Quiz",
+      creator: userOne._id,
+      allottedTime: 10,
+      description: "Because we like animals more than people",
+      questions: [
+        {
+          q: "Which animal has the highest blood pressure?",
+          options: ["Humans", "Giraffe", "BlueWhale"],
+          answer: "Giraffe",
+        },
+        {
+          q: "A female deer is known as a?",
+          options: ["Doe","Buck", "Fawn"],
+          answer: "Doe",
+        },
+        {
+          q: "How many legs does a spider has?",
+          options: ["Six", "Ten", "Eight"],
+          answer: "Eight",
+        },
+        {
+          q: "Name the only animal which cannot jump?",
+          options: ["Elephant", "Giraffe", "Buffalo"],
+          answer: "Elephant",
+        },
+        {
+          q: "Which animal eats sugarcane?",
+          options: ["Chimpanzees", "Pandas", "Racoons"],
+          answer: "Pandas",
+        },
+      ],
+    },
+    {
+      title: "Marvel Movies Quiz",
+      creator: userTwo._id,
+      allottedTime: 10,
+      description: "Spoiler Alert, obviously",
+      questions: [
+        {
+          q: "What country are Scarlet Witch and Quicksilver from?",
+          options: ["Romania", "Sokovia", "Germany"],
+          answer: "Sokovia",
+        },
+        {
+          q: "What is the real name of the Black Panther?",
+          options: ["T'Challa", "T'Chaka", "W'Kabi"],
+          answer: "T'Challa",
+        },
+        {
+          q: "Who is Thor's sister?",
+          options: ["Valkyrie", "Loki", "Hela"],
+          answer: "Hela",
+        },
+        {
+          q: "Who is the Winter Soldier?",
+          options: ["Bucky", "Steve", "Clint"],
+          answer: "Bucky",
+        },
+        {
+          q: "Where is Captain America from?",
+          options: ["Queens","Newark", "Brooklyn"],
+          answer: "Brooklyn",
+        },
+      ],
+    },
+    {
+      title: "Quiz Creator Quiz",
+      creator: userTwo._id,
+      allottedTime: 10,
+      description: "A quiz about us, because we're the best.",
+      questions: [
+        {
+          q: "What other language does Noel know?",
+          options: ["Russian", "Japanese", "French"],
+          answer: "Japanese",
+        },
+        {
+          q: "What activity does Tyrese like to do?",
+          options: ["Read", "Paint", "Exercise"],
+          answer: "Exercise",
+        },
+        {
+          q: "Which country has Christopher not traveled to?",
+          options: ["China", "Germany", "Columbia"],
+          answer: "China",
+        },
+        {
+          q: "Which of Katie's pets only has three feet?",
+          options: ["Loki-Dog","Bucky-Cat", "Luna-Dog"],
+          answer: "Bucky-Cat",
+        },
+        {
+          q: "Which of the creators is the youngest?",
+          options: ["Tyrese", "Noel", "Christopher"],
+          answer: "Noel",
+        },
+      ],
     }
   ]);
 
