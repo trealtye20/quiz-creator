@@ -13,9 +13,9 @@ export const ADD_QUIZ = gql`
       highScore
       allottedTime
       description
-      creator
-    }
+      creator 
   }
+}
 `;
 
 export const ADD_USER = gql`
