@@ -31,7 +31,7 @@ db.once("open", async () => {
     {
       title: "Star Wars Knowledge",
       creator: userOne._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Star Wars Cool because chewy is the man and we love him. Also rip han",
       questions: [
         {
@@ -60,13 +60,12 @@ db.once("open", async () => {
           answer: "Anakin",
         },
       ],
-      allottedTime: 10
     },
 
     {
       title: "Disney Movie Quiz",
       creator: userTwo._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Disney Cool, because disney land and magic and love or something. I like phineas and ferb.",
       questions: [
         {
@@ -95,13 +94,12 @@ db.once("open", async () => {
           answer: "Weather",
         },
       ],
-      allottedTime: 10
     },
 
     {
       title: "Baseball Quiz",
       creator: userOne._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Baseball Players love these quizzes because it makes them think somebody cares, but they dont lol.",
       questions: [
         {
@@ -130,13 +128,12 @@ db.once("open", async () => {
           answer: "4",
         },
       ],
-      allottedTime: 10
     },
 
     {
       title: "History Quiz",
       creator: userTwo._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Sailed the ocean blue in 1530, maybe im not historian.",
       questions: [
         {
@@ -165,7 +162,6 @@ db.once("open", async () => {
           answer: "1783",
         },
       ],
-      allottedTime: 10
     },
   ]);
 

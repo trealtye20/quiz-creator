@@ -18,7 +18,7 @@ function QuizPage() {
     if (loading){render = <h1>I'm Loading!</h1>}
     else if (error){render = <h1>Error</h1>}
     else { 
-      render =  <QuizApp  quiz={data.quiz}/>
+      render = <QuizApp  quiz={data.quiz}/>
     }
     return render;
   }
