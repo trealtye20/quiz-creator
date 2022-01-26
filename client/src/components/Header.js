@@ -10,18 +10,14 @@ function Header() {
     if (!render){
       return null
     }
-    return (
-      <Nav.Link href="" id="text" onClick={(e) => {console.log(e.target); AuthService.logout();}}>Log Out</Nav.Link>
-    );
+    return <Nav.Link href="" id="text" onClick={AuthService.logout()}>Log Out</Nav.Link>;
   }
   const renderLoginLink = () => {
     const render = AuthService.loggedIn()
     if(render){
       return null
     }
-    return (
-      <Nav.Link href="" id="text" >Login</Nav.Link>
-    )
+    return <Nav.Link href="" id="text" >Login</Nav.Link>;
   }
   return (
     <div className="head">
