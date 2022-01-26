@@ -27,11 +27,11 @@ function Header() {
     <div className="head">
       <h1>❓Welcome to the quiz Taker❓</h1>
       <Navbar>
-        <Navbar.Brand href="" id="text">
+        <Navbar.Brand href="/mainfeed" id="text">
           Quiz-Creator
         </Navbar.Brand>
         <Nav>
-          <Nav.Link href="" id="text">Home</Nav.Link>
+          <Nav.Link href="/mainfeed" id="text">Home</Nav.Link>
           {renderLoginLink()}
           {renderLogoutLink()}
         </Nav>
