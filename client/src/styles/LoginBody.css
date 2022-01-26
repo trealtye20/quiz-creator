@@ -1,6 +1,6 @@
 .login {
     background-image: url("../img/questionStar.gif");
     background-size: cover;
-    min-height: 10vh;
+    min-height: 100vh;
     background-position: center;
 }
