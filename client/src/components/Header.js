@@ -9,7 +9,11 @@ function Header() {
     if (!render){
       return null
     }
-    return <Nav.Link href="" id="text" onClick={AuthService.logout()}>Log Out</Nav.Link>;
+    return <Nav.Link href="" id="text" onClick={(e) => {
+      console.log(e.target.tagName);
+      AuthService.logout()
+    }
+    }>Log Out</Nav.Link>;
   }
   const renderLoginLink = () => {
     const render = AuthService.loggedIn()
@@ -27,8 +31,8 @@ function Header() {
         </Navbar.Brand>
         <Nav>
           <Nav.Link href="" id="text">Home</Nav.Link>
-          {renderLoginLink}
-          {renderLogoutLink}
+          {renderLoginLink()}
+          {renderLogoutLink()}
         </Nav>
       </Navbar>
     </div>
