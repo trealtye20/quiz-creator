@@ -31,7 +31,7 @@ db.once("open", async () => {
     {
       title: "Star Wars Knowledge",
       creator: userOne._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Star Wars Cool because chewy is the man and we love him. Also rip han",
       questions: [
         {
@@ -66,7 +66,7 @@ db.once("open", async () => {
     {
       title: "Disney Movie Quiz",
       creator: userTwo._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Disney Cool, because disney land and magic and love or something. I like phineas and ferb.",
       questions: [
         {
@@ -101,7 +101,7 @@ db.once("open", async () => {
     {
       title: "Baseball Quiz",
       creator: userOne._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Baseball Players love these quizzes because it makes them think somebody cares, but they dont lol.",
       questions: [
         {
@@ -136,7 +136,7 @@ db.once("open", async () => {
     {
       title: "History Quiz",
       creator: userTwo._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Sailed the ocean blue in 1530, maybe im not historian.",
       questions: [
         {
@@ -167,6 +167,39 @@ db.once("open", async () => {
       ],
       allottedTime: 10
     },
+    {
+      title: "Biology Quiz",
+      creator: userTwo._id,
+      allottedTime: 10,
+      description: "We all have bodies?",
+      questions: [
+        {
+          q: "What is another name for the 'voice-box?",
+          options: ["Thorax", "Larynx", "Thyroid"],
+          answer: "Larynx",
+        },
+        {
+          q: "What is the name of the thigh bone?",
+          options: ["Femur", "Tibia", "Fibula"],
+          answer: "Femur",
+        },
+        {
+          q: "Which is the sheet-like muscle at the bottom of a human chest?",
+          options: ["Diaphragm", "Thorax", "Tricep"],
+          answer: "Diaphragm",
+        },
+        {
+          q: "What body system is the human heart part of?",
+          options: ["Skeletal", "Nervous", "Circulatory"],
+          answer: "Circulatory",
+        },
+        {
+          q: "Where is the Humerus located?",
+          options: ["Hand", "Fore-arm", "Upper-arm"],
+          answer: "Upper-arm",
+        },
+      ],
+    }
   ]);
 
   console.log(`****** quiz data inserted- \n ${quizzes}`);
