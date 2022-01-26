@@ -24,9 +24,8 @@ function CardDisplay({data}) {
       <a onClick={onClickHandler} >
       <Card.Header className="unclickable">{data.title}</Card.Header>
       <Card.Body className= "unclickable">
-        <Card.Title> </Card.Title>
         <Card.Text>
-          Card Text
+          {data.description}
         </Card.Text>
       </Card.Body>
       </a>
