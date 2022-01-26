@@ -10,8 +10,7 @@ const QuizForm = () => {
             <Form.Label>Title</Form.Label>
             <Form.Control type="text" placeholder="Enter quiz title" />
         </Form.Group>
-
-        {}
+        {questions}
         
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Check me out" />
