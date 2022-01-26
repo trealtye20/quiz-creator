@@ -4,12 +4,13 @@ import LoginSignup from "../components/LoginSignup";
 import Users from "../components/Users";
 import Footer from "../components/Footer";
 import Mainfeed from "./Mainfeed";
+import "../styles/LoginBody.css"
 
 const LoginPage = () => {
   // const profiles = data?.profiles || [];
 
   return (
-    <div>
+    <div className="login">
       <Header />
       <LoginSignup/>
       <Footer />

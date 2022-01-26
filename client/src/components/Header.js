@@ -3,6 +3,7 @@ import "../styles/Header.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import AuthService from "../utils/auth";
 
+
 function Header() {
   const renderLogoutLink = () => {
     const render = AuthService.loggedIn()
@@ -24,7 +25,7 @@ function Header() {
   }
   return (
     <div className="head">
-      <h1>❓Welcome to the quiz creator❓</h1>
+      <h1>❓Welcome to the quiz Taker❓</h1>
       <Navbar>
         <Navbar.Brand href="" id="text">
           Quiz-Creator
