@@ -12,26 +12,25 @@ import CardDisplay from "../components/CardDisplay";
 const Mainfeed = () => {
   const { loading, error, data } = useQuery(GET_ALL_QUIZZES);
   let render;
-  if (error){render = <h1>Error Error!</h1>}
-  if (loading){render = <h1>I'm Loading!</h1>}
-  else{
-    render = data.quizzes.map((quizData,index) => {
-      return (
-        <CardDisplay data={quizData}
-        key={index} 
-        />
-      );
-    })
+  if (error) {
+    render = <h1>Error Error!</h1>;
+  }
+  if (loading) {
+    render = <h1>I'm Loading!</h1>;
+  } else {
+    render = data.quizzes.map((quizData, index) => {
+      return <CardDisplay data={quizData} key={index} />;
+    });
   }
 
   return (
     <div>
       <Header />
-      
+
       {render}
       <Footer />
     </div>
   );
-}
+};
 
 export default Mainfeed;

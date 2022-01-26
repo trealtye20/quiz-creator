@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import "./CardDisplay.css";
 
 function CardDisplay({data}) {
+  console.log(`CardDisplay: ${JSON.stringify(data, null, 2)}`);
   const onClickHandler = (e) => {
     e.preventDefault();
     console.log(e.target.tagName)

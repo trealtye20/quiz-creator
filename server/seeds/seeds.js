@@ -60,6 +60,7 @@ db.once("open", async () => {
           answer: "Anakin",
         },
       ],
+      allottedTime: 10
     },
 
     {
@@ -94,6 +95,7 @@ db.once("open", async () => {
           answer: "Weather",
         },
       ],
+      allottedTime: 10
     },
 
     {
@@ -128,6 +130,7 @@ db.once("open", async () => {
           answer: "4",
         },
       ],
+      allottedTime: 10
     },
 
     {
@@ -162,6 +165,7 @@ db.once("open", async () => {
           answer: "1783",
         },
       ],
+      allottedTime: 10
     },
   ]);
 

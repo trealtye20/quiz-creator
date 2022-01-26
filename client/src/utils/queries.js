@@ -1,46 +1,53 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_USER = gql`
   query user($_id: ID) {
-    user(_id: $_id){
-      _id
-      username
+    user(_id: $_id) {
+      userName
       email
-      password
-      quizzes
+      quizzes {
+        title
+        _id
+        questions {
+          q
+          options
+          answer
+        }
+        highScore
+      }
     }
   }
 `;
 
 export const GET_QUIZ = gql`
-query quiz($_id: ID) {
-  quiz(_id: $_id){
-    _id
-    title
-    questions{
-      q
-      options
-      answer
+  query quiz($_id: ID) {
+    quiz(_id: $_id) {
+      _id
+      title
+      questions {
+        q
+        options
+        answer
+      }
+      highScore
+      allottedTime
+      description
+      creator
     }
-    highScore
-    allottedTime
-    description
-    creator
   }
-}
 `;
 
 export const GET_ALL_USERS = gql`
-  query users{
-    users{
+  query users {
+    users {
       _id
       userName
       email
-      password 
-      quizzes{
+      password
+      quizzes {
         _id
         title
-        questions{
+        questions {
           q
           options
           answer
@@ -55,11 +62,11 @@ export const GET_ALL_USERS = gql`
 `;
 
 export const GET_ALL_QUIZZES = gql`
-  query quizzes{
-    quizzes{
+  query getQuizzes{
+    quizzes {
       _id
       title
-      questions{
+      questions {
         q
         options
         answer
