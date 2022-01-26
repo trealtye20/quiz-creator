@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
+import {Card} from 'react-bootstrap';
+import './styles/QuizApp.css'
 
 export default function QuizApp({ quiz }) {
   console.log(`QuizApp: quiz = ${JSON.stringify(quiz)}`);
-  // const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(0);
   const [score, setScore] = useState(0);
-  // const [timer, setTimer] = useState(0);
+  const [displayTimer, setDisplayTimer] = useState(0);
   let interval;
   let timer = 0;
-  let currentQuestion = 0;
 
   useEffect(() => {
     console.log("useEffect- current question:", currentQuestion);
@@ -25,6 +26,7 @@ export default function QuizApp({ quiz }) {
         if (timer < quiz.allottedTime) {
         // setTimer((timer) => timer + 1 );
         timer = timer + 1;
+        setDisplayTimer(timer);
         } else {
           timer = 0;
           console.log("else");
@@ -42,29 +44,32 @@ export default function QuizApp({ quiz }) {
     const nextQuestion = currentQuestion + 1;
     console.log(`next question: ${nextQuestion}`)
     if (nextQuestion < quiz.questions.length) {
-      // setCurrentQuestion(nextQuestion);
-      currentQuestion = nextQuestion;
+      setCurrentQuestion(nextQuestion);
       clearInterval(interval);
-      // startTimer();
+      setDisplayTimer(timer);
+      //startTimer();
     } else {
       setShowScore(true);
+      clearInterval(interval);
     }
   };
   const checkAnswer = (answer, correctAnswer) => {
     return answer == correctAnswer;
   };
   return (
+
+    <Card id="cards" border="primary">
     <div className="QuizApp">
       {showScore ? (
-        <div className="score">Your score is {score} !</div>
+        <div className="score" id="scores">Your score is {score} !</div>
       ) : (
         <>
-          <div className="questions">
+          <div className="questions" id="questions">
             <div className="question">{quiz.questions[currentQuestion].q}</div>
           </div>
-          <div className="options">
+          <div className="options" id="options">
             {quiz.questions[currentQuestion].options.map((answerOption) => (
-              <button
+              <button id="button"
                 onClick={() =>
                   handleOptionClick(
                     checkAnswer(
@@ -77,9 +82,12 @@ export default function QuizApp({ quiz }) {
                 {answerOption}
               </button>
             ))}
+          <div>{displayTimer}</div>
           </div>
         </>
       )}
     </div>
+
+    </Card>
   );
 }

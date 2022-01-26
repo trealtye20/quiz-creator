@@ -31,7 +31,7 @@ db.once("open", async () => {
     {
       title: "Star Wars Knowledge",
       creator: userOne._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Star Wars Cool because chewy is the man and we love him. Also rip han",
       questions: [
         {
@@ -60,13 +60,12 @@ db.once("open", async () => {
           answer: "Anakin",
         },
       ],
-      allottedTime: 10
     },
 
     {
       title: "Disney Movie Quiz",
       creator: userTwo._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Disney Cool, because disney land and magic and love or something. I like phineas and ferb.",
       questions: [
         {
@@ -95,13 +94,12 @@ db.once("open", async () => {
           answer: "Weather",
         },
       ],
-      allottedTime: 10
     },
 
     {
       title: "Baseball Quiz",
       creator: userOne._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Baseball Players love these quizzes because it makes them think somebody cares, but they dont lol.",
       questions: [
         {
@@ -130,13 +128,12 @@ db.once("open", async () => {
           answer: "4",
         },
       ],
-      allottedTime: 10
     },
 
     {
       title: "History Quiz",
       creator: userTwo._id,
-      alottedTime: 10,
+      allottedTime: 10,
       description: "Sailed the ocean blue in 1530, maybe im not historian.",
       questions: [
         {
@@ -165,8 +162,139 @@ db.once("open", async () => {
           answer: "1783",
         },
       ],
-      allottedTime: 10
     },
+    {
+      title: "Biology Quiz",
+      creator: userTwo._id,
+      allottedTime: 10,
+      description: "We all have bodies?",
+      questions: [
+        {
+          q: "What is another name for the 'voice-box?",
+          options: ["Thorax", "Larynx", "Thyroid"],
+          answer: "Larynx",
+        },
+        {
+          q: "What is the name of the thigh bone?",
+          options: ["Femur", "Tibia", "Fibula"],
+          answer: "Femur",
+        },
+        {
+          q: "Which is the sheet-like muscle at the bottom of a human chest?",
+          options: ["Diaphragm", "Thorax", "Tricep"],
+          answer: "Diaphragm",
+        },
+        {
+          q: "What body system is the human heart part of?",
+          options: ["Skeletal", "Nervous", "Circulatory"],
+          answer: "Circulatory",
+        },
+        {
+          q: "Where is the Humerus located?",
+          options: ["Hand", "Fore-arm", "Upper-arm"],
+          answer: "Upper-arm",
+        },
+      ],
+    },
+    {
+      title: "Animal Quiz",
+      creator: userOne._id,
+      allottedTime: 10,
+      description: "Because we like animals more than people",
+      questions: [
+        {
+          q: "Which animal has the highest blood pressure?",
+          options: ["Humans", "Giraffe", "BlueWhale"],
+          answer: "Giraffe",
+        },
+        {
+          q: "A female deer is known as a?",
+          options: ["Doe","Buck", "Fawn"],
+          answer: "Doe",
+        },
+        {
+          q: "How many legs does a spider has?",
+          options: ["Six", "Ten", "Eight"],
+          answer: "Eight",
+        },
+        {
+          q: "Name the only animal which cannot jump?",
+          options: ["Elephant", "Giraffe", "Buffalo"],
+          answer: "Elephant",
+        },
+        {
+          q: "Which animal eats sugarcane?",
+          options: ["Chimpanzees", "Pandas", "Racoons"],
+          answer: "Pandas",
+        },
+      ],
+    },
+    {
+      title: "Marvel Movies Quiz",
+      creator: userTwo._id,
+      allottedTime: 10,
+      description: "Spoiler Alert, obviously",
+      questions: [
+        {
+          q: "What country are Scarlet Witch and Quicksilver from?",
+          options: ["Romania", "Sokovia", "Germany"],
+          answer: "Sokovia",
+        },
+        {
+          q: "What is the real name of the Black Panther?",
+          options: ["T'Challa", "T'Chaka", "W'Kabi"],
+          answer: "T'Challa",
+        },
+        {
+          q: "Who is Thor's sister?",
+          options: ["Valkyrie", "Loki", "Hela"],
+          answer: "Hela",
+        },
+        {
+          q: "Who is the Winter Soldier?",
+          options: ["Bucky", "Steve", "Clint"],
+          answer: "Bucky",
+        },
+        {
+          q: "Where is Captain America from?",
+          options: ["Queens","Newark", "Brooklyn"],
+          answer: "Brooklyn",
+        },
+      ],
+    },
+    {
+      title: "Quiz Creator Quiz",
+      creator: userTwo._id,
+      allottedTime: 10,
+      description: "A quiz about us, because we're the best.",
+      questions: [
+        {
+          q: "What other language does Noel know?",
+          options: ["Russian", "Japanese", "French"],
+          answer: "Japanese",
+        },
+        {
+          q: "What activity does Tyrese like to do?",
+          options: ["Read", "Paint", "Exercise"],
+          answer: "Exercise",
+        },
+        {
+          q: "Which country has Christopher not traveled to?",
+          options: ["China", "Germany", "Columbia"],
+          answer: "China",
+        },
+        {
+          q: "Which of Katie's pets only has three feet?",
+          options: ["Loki-Dog","Bucky-Cat", "Luna-Dog"],
+          answer: "Bucky-Cat",
+        },
+        {
+          q: "Which of the creators is the youngest?",
+          options: ["Tyrese", "Noel", "Christopher"],
+          answer: "Noel",
+        },
+      ],
+    }
   ]);
 
   console.log(`****** quiz data inserted- \n ${quizzes}`);
