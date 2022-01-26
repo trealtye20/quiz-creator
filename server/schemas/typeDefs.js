@@ -18,6 +18,8 @@ const typeDefs = gql`
     questions: [Question]
     highScore: Int
     allottedTime: Int
+    description: String
+    creator: ID
   }
   type Question {
     q: String
@@ -36,7 +38,7 @@ const typeDefs = gql`
     answer: String
   }
   type Mutation {
-    addQuiz(title: String!, questions: Input_Question!, allottedTime: Int!): Quiz
+    addQuiz(title: String!, questions: Input_Question!, allottedTime: Int!, description: String!): Quiz
     # Sign up and log in
     addUser(userName: String!, email: String!, password: String!, quizzes: [ID]): Auth
     login(email: String!, password: String!): Auth

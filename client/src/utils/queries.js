@@ -15,6 +15,7 @@ export const GET_USER = gql`
 export const GET_QUIZ = gql`
   query quiz($_id: ID) {
     quiz{
+      _id
       title
       questions{
         q
@@ -23,6 +24,8 @@ export const GET_QUIZ = gql`
       }
       highScore
       allottedTime
+      description
+      creator
     }
   }
 `;
@@ -35,6 +38,7 @@ export const GET_ALL_USERS = gql`
       email
       password 
       quizzes{
+        _id
         title
         questions{
           q
@@ -43,6 +47,8 @@ export const GET_ALL_USERS = gql`
         }
         highScore
         allottedTime
+        description
+        creator
       }
     }
   }
@@ -60,6 +66,8 @@ export const GET_ALL_QUIZZES = gql`
       }
       highScore
       allottedTime
+      description
+      creator
     }
   }
 `;

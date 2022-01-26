@@ -5,18 +5,35 @@ import AuthService from "../utils/auth";
 
 
 function Header() {
-
+  const renderLogoutLink = () => {
+    const render = AuthService.loggedIn()
+    if (!render){
+      return null
+    }
+    return (
+      <Nav.Link href="" id="text" onClick={(e) => {console.log(e.target); AuthService.logout();}}>Log Out</Nav.Link>
+    );
+  }
+  const renderLoginLink = () => {
+    const render = AuthService.loggedIn()
+    if(render){
+      return null
+    }
+    return (
+      <Nav.Link href="" id="text" >Login</Nav.Link>
+    )
+  }
   return (
     <div className="head">
       <h1>❓Welcome to the quiz creator❓</h1>
       <Navbar>
-        <Navbar.Brand href="#home" id="text">
+        <Navbar.Brand href="" id="text">
           Quiz-Creator
         </Navbar.Brand>
         <Nav>
-          <Nav.Link href="#home" id="text">Home</Nav.Link>
-          <Nav.Link href="#login" id="text" >Login</Nav.Link>
-          <Nav.Link href="#logout" id="text">Log Out</Nav.Link>
+          <Nav.Link href="" id="text">Home</Nav.Link>
+          {renderLoginLink}
+          {renderLogoutLink}
         </Nav>
       </Navbar>
     </div>
