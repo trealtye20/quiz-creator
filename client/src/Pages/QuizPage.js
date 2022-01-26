@@ -21,7 +21,6 @@ function QuizPage() {
     return render;
   }
   return (
-    
     <div>{renderApp()}</div>
     
   );
