@@ -4,6 +4,8 @@ import QuizApp from "../QuizApp";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_QUIZ } from "../utils/queries";
+import Header from '../components/Header'
+import Footer from '../components/Footer';
 
 function QuizPage() {
   const {quizId} = useParams()
@@ -22,7 +24,11 @@ function QuizPage() {
   }
   return (
     
-    <div>{renderApp()}</div>
+    <div>
+      <Header/>
+      {renderApp()}
+      <Footer />
+      </div>
     
   );
 
