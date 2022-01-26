@@ -21,7 +21,7 @@ function Header() {
   }
   return (
     <div className="head">
-      <h1>❓Welcome to the quiz creator❓</h1>
+      <h1>❓Welcome to the quiz Taker❓</h1>
       <Navbar>
         <Navbar.Brand href="" id="text">
           Quiz-Creator

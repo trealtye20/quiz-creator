@@ -1,11 +1,11 @@
 
 .head{
   text-align: center;
-  background-image: url("../img/questionStar.gif");
+  background-color: rgb(6, 57, 224);
   background-size: cover;
   min-height: 10vh;
   background-position: center;
-  color: black;
+  color: white;
 }
 
 .color {
