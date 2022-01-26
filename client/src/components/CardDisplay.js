@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
-import "./CardDisplay.css";
+import "../styles/CardDisplay.css";
 
 function CardDisplay({data}) {
   console.log(`CardDisplay: ${JSON.stringify(data, null, 2)}`);
@@ -15,7 +15,7 @@ function CardDisplay({data}) {
     window.location.assign("/takequiz/" + data._id)
   }
   return (
-    <Card
+    <Card id="quizcard"
       bg="dark"
       text="white"
       style={{ width: "32rem" }}

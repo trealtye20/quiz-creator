@@ -58,7 +58,7 @@ export default function QuizApp({ quiz }) {
   };
   return (
 
-    <Card>
+    <Card id="cards" border="primary">
     <div className="QuizApp">
       {showScore ? (
         <div className="score" id="scores">Your score is {score} !</div>
@@ -69,7 +69,7 @@ export default function QuizApp({ quiz }) {
           </div>
           <div className="options" id="options">
             {quiz.questions[currentQuestion].options.map((answerOption) => (
-              <button
+              <button id="button"
                 onClick={() =>
                   handleOptionClick(
                     checkAnswer(
