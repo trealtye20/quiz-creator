@@ -4,6 +4,7 @@ import LoginPage from "./Pages/LoginPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Mainfeed from "./Pages/Mainfeed";
 import QuizPage from "./Pages/QuizPage";
+import QuizForm from "./components/QuizForm";
 
 function App() {
   const client = new ApolloClient({
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route exact path ="/mainfeed">
           <Mainfeed />
+        </Route>
+        <Route exact path ="/createquiz">
+          <QuizForm />
         </Route>
       </Router>
     </ApolloProvider>

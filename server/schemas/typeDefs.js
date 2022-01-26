@@ -37,6 +37,7 @@ const typeDefs = gql`
     options: [String],
     answer: String
   }
+  # Change addQuiz InputQuestion paramater to array
   type Mutation {
     addQuiz(title: String!, questions: Input_Question!, allottedTime: Int!, description: String!): Quiz
     # Sign up and log in
