@@ -26,9 +26,6 @@ function App() {
         <Route exact path ="/mainfeed">
           <Mainfeed />
         </Route>
-        <Route exact path ="/createquiz">
-          <QuizForm />
-        </Route>
       </Router>
     </ApolloProvider>
   );
