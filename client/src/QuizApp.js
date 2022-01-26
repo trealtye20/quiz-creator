@@ -5,7 +5,7 @@ export default function QuizApp({ quiz }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(0);
   const [score, setScore] = useState(0);
-  //const [displayTimer, setDisplayTimer] = useState(0);
+  const [displayTimer, setDisplayTimer] = useState(0);
   let interval;
   let timer = 0;
 
@@ -24,7 +24,7 @@ export default function QuizApp({ quiz }) {
         if (timer < quiz.allottedTime) {
         // setTimer((timer) => timer + 1 );
         timer = timer + 1;
-        //setDisplayTimer(timer);
+        setDisplayTimer(timer);
         } else {
           timer = 0;
           console.log("else");
@@ -44,8 +44,8 @@ export default function QuizApp({ quiz }) {
     if (nextQuestion < quiz.questions.length) {
       setCurrentQuestion(nextQuestion);
       clearInterval(interval);
-      //setDisplayTimer(timer);
-      startTimer();
+      setDisplayTimer(timer);
+      //startTimer();
     } else {
       setShowScore(true);
       clearInterval(interval);
@@ -78,7 +78,7 @@ export default function QuizApp({ quiz }) {
                 {answerOption}
               </button>
             ))}
-          {/*<div>{displayTimer}</div>*/}
+          <div>{displayTimer}</div>
           </div>
         </>
       )}
