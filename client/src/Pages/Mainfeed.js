@@ -26,7 +26,6 @@ const Mainfeed = () => {
   return (
     <div>
       <Header />
-
       {render}
       <Footer />
     </div>
