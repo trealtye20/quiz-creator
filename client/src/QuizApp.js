@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function QuizApp({props}) {
-  console.log(props)
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(0);
   const [score, setScore] = useState(0);

@@ -7,9 +7,32 @@ db.once("open", async () => {
   await Quiz.deleteMany();
   await User.deleteMany();
 
+  let userOne = await User.create(
+    {
+      userName: "Chris",
+      email: "Chriscodes@gmail.com",
+      password: "password",
+      quizzes: [],
+    },
+  );
+  let userTwo = await User.create(
+    {
+      userName: "Katie",
+      email: "Katiecodes@gmail.com",
+      password: "password",
+      quizzes: [],
+    },
+  );
+
+  console.log(`\n****** user one inserted- \n ${userOne}`);
+  console.log(`\n****** user two inserted- \n ${userTwo}`);
+
   const quizzes = await Quiz.insertMany([
     {
       title: "Star Wars Knowledge",
+      creator: userOne._id,
+      alottedTime: 10,
+      description: "Star Wars Cool because chewy is the man and we love him. Also rip han",
       questions: [
         {
           q: "What species is Chewbacca?",
@@ -41,6 +64,9 @@ db.once("open", async () => {
 
     {
       title: "Disney Movie Quiz",
+      creator: userTwo._id,
+      alottedTime: 10,
+      description: "Disney Cool, because disney land and magic and love or something. I like phineas and ferb.",
       questions: [
         {
           q: "What is the name of Andy's neighbor in Toy Story?",
@@ -72,6 +98,9 @@ db.once("open", async () => {
 
     {
       title: "Baseball Quiz",
+      creator: userOne._id,
+      alottedTime: 10,
+      description: "Baseball Players love these quizzes because it makes them think somebody cares, but they dont lol.",
       questions: [
         {
           q: "How many players are on a baseball team?",
@@ -103,6 +132,9 @@ db.once("open", async () => {
 
     {
       title: "History Quiz",
+      creator: userTwo._id,
+      alottedTime: 10,
+      description: "Sailed the ocean blue in 1530, maybe im not historian.",
       questions: [
         {
           q: "Who was the first European to land in North America",
@@ -135,25 +167,29 @@ db.once("open", async () => {
 
   console.log(`****** quiz data inserted- \n ${quizzes}`);
 
-  const userOne = await User.create(
-    {
-      userName: "Chris",
-      email: "Chriscodes@gmail.com",
-      password: "password",
-      quizzes: [quizzes[0]._id],
-    },
-  );
-  const userTwo = await User.create(
-    {
-      userName: "Katie",
-      email: "Katiecodes@gmail.com",
-      password: "password",
-      quizzes: [quizzes[1]._id],
-    },
-  );
+  userOne = await User.findOneAndUpdate(
+    { _id: userOne._id },
+    { $push: { quizzes: quizzes[0]._id}},
+    { new: true }
+  )
+  userOne = await User.findOneAndUpdate(
+    { _id: userOne._id },
+    { $push: { quizzes: quizzes[2]._id}},
+    { new: true }
+  )
+  userTwo = await User.findOneAndUpdate(
+    { _id: userTwo._id },
+    { $push: { quizzes: quizzes[1]._id}},
+    { new: true }
+  )
+  userTwo = await User.findOneAndUpdate(
+    { _id: userTwo._id },
+    { $push: { quizzes: quizzes[3]._id}},
+    { new: true }
+  )
 
-  console.log(`\n****** user one inserted- \n ${userOne}`);
-  console.log(`\n****** user two inserted- \n ${userTwo}`);
+  console.log(`****** User Quizzes Data inserted- \n ${userOne}`);
+  console.log(`****** User Quizzes Data inserted- \n ${userTwo}`)
 
   console.log("******* data all seeded ********");
 
