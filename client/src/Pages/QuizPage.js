@@ -3,7 +3,7 @@ import "../styles/Quizzes.css";
 import QuizApp from "../QuizApp";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { GET_QUIZ } from "../utils/queries"
+import { GET_QUIZ } from "../utils/queries";
 
 function QuizPage() {
   console.log("on the quiz page")
@@ -19,10 +19,7 @@ function QuizPage() {
     else if (error){render = <h1>Error</h1>}
     
     else { 
-      console.log(loading)
-      console.log(error)
-      console.log(data)
-      render =  <QuizApp props = {data}/>
+      render =  <QuizApp  quiz={data.quiz}/>
     }
     return render;
   }
