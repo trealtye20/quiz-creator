@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 export default function QuizApp({ quiz }) {
-  console.log(`QuizApp: quiz = ${JSON.stringify(quiz)}`);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(0);
   const [score, setScore] = useState(0);
   const [displayTimer, setDisplayTimer] = useState(0);
-  let interval;
+  const [intervalState, setIntervalState] = useState("");
   let timer = 0;
 
   useEffect(() => {
@@ -15,11 +14,9 @@ export default function QuizApp({ quiz }) {
   }, [currentQuestion]);
 
   const startTimer = () => {
-    console.log('startTimer');
-    if (!interval) {
-      console.log(interval);
-      interval = setInterval(() => {
-        console.log('interval')
+      clearInterval(intervalState)
+      setIntervalState(setInterval(() => {
+        console.log('interval:' + intervalState)
         console.log(`timer: ${timer}, quiz.allottedTime: ${quiz.allottedTime}`);
         if (timer < quiz.allottedTime) {
         // setTimer((timer) => timer + 1 );
@@ -30,8 +27,7 @@ export default function QuizApp({ quiz }) {
           console.log("else");
           handleOptionClick(false);
         }
-      }, 1000);
-    }
+      }, 1000))
   };
 
   const handleOptionClick = (isCorrect) => {
@@ -43,12 +39,10 @@ export default function QuizApp({ quiz }) {
     console.log(`next question: ${nextQuestion}`)
     if (nextQuestion < quiz.questions.length) {
       setCurrentQuestion(nextQuestion);
-      clearInterval(interval);
-      setDisplayTimer(timer);
-      //startTimer();
     } else {
       setShowScore(true);
-      clearInterval(interval);
+      clearInterval(intervalState)
+
     }
   };
   const checkAnswer = (answer, correctAnswer) => {
