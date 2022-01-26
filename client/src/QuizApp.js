@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import {Card} from 'react-bootstrap';
+import './styles/QuizApp.css'
 
 export default function QuizApp({ quiz }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -49,17 +51,19 @@ export default function QuizApp({ quiz }) {
     return answer == correctAnswer;
   };
   return (
+
+    <Card id="cards" border="primary">
     <div className="QuizApp">
       {showScore ? (
-        <div className="score">Your score is {score} !</div>
+        <div className="score" id="scores">Your score is {score} !</div>
       ) : (
         <>
-          <div className="questions">
+          <div className="questions" id="questions">
             <div className="question">{quiz.questions[currentQuestion].q}</div>
           </div>
-          <div className="options">
+          <div className="options" id="options">
             {quiz.questions[currentQuestion].options.map((answerOption) => (
-              <button
+              <button id="button"
                 onClick={() =>
                   handleOptionClick(
                     checkAnswer(
@@ -77,5 +81,7 @@ export default function QuizApp({ quiz }) {
         </>
       )}
     </div>
+
+    </Card>
   );
 }
