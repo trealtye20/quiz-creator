@@ -3,19 +3,22 @@ import Header from '../components/Header';
 import LoginSignup from "../components/LoginSignup";
 import Users from "../components/Users";
 import Footer from "../components/Footer";
-import Mainfeed from "../Pages/Mainfeed";
+import Mainfeed from "./Mainfeed";
 
-const Landingpage = () => {
+const LoginPage = () => {
   // const profiles = data?.profiles || [];
 
   return (
     <div>
-      <Mainfeed />
+      <Header />
+      <LoginSignup/>
+      <Footer />
+      
     </div>
   );
 };
 
-export default Landingpage;
+export default LoginPage;
 
 
 
