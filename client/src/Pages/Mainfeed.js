@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Quizzes from "./Quizzes";
+import QuizPage from "./QuizPage";
 // import LoginSignup from "../components/LoginSignup";
 // import Users from "../components/Users";
 import Footer from "../components/Footer";
@@ -27,6 +27,7 @@ const Mainfeed = () => {
   return (
     <div>
       <Header />
+      
       {render}
       <Footer />
     </div>

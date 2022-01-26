@@ -11,6 +11,7 @@ function CardDisplay({data}) {
     if (!e.target.tagName === "A") {return;}
     //Redirect to quiz page
     //<ReactComponent props={data} />
+    window.location.assign("/takequiz/" + data._id)
   }
   return (
     <Card

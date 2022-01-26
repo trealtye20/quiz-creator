@@ -6,6 +6,7 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   Query: {
     user: async (args) => {
+      console.log(args)
       console.log("Resolver: User Query");
       const user = await User.findOne({ _id: args._id }).populate("quizzes")
       return user;
@@ -32,9 +33,10 @@ const resolvers = {
       if (!context.user){
         return new AuthenticationError("Please login.")
       }
+      console.log(args)
       const quiz = await Quiz.create(
       {
-        args, 
+        ...args, 
         creator: context.user._id
       });
       User.findOneAndUpdate(

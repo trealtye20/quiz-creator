@@ -1,21 +1,21 @@
 import { gql } from '@apollo/client';
 
 export const ADD_QUIZ = gql`
-  mutation addQuiz($title: String!, $questions: Input_Questions!, $alottedTime: Int!) {
-    addQuiz(title: $title, questions: $questions, alottedTime: $allotedTime) {
-      _id
-      title
-      questions{
-        q
-        options
-        answer
-      }
-      highScore
-      allottedTime
-      description
-      creator
+mutation addQuiz($title: String!, $questions: Input_Question!, $allottedTime: Int!, $description: String!) {
+  addQuiz(title: $title, questions: $questions, allottedTime: $allottedTime, description: $description) {
+    _id
+    title
+    questions{
+      q
+      options
+      answer
     }
+    highScore
+    allottedTime
+    description
+    creator
   }
+}
 `;
 
 export const ADD_USER = gql`
