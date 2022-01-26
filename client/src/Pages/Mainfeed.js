@@ -8,7 +8,7 @@ import { useQuery } from "@apollo/client";
 import { GET_ALL_QUIZZES } from "../utils/queries";
 //import { Cards } from "../components/Cards";
 import CardDisplay from "../components/CardDisplay";
-
+import '../styles/Feed.css'
 const Mainfeed = () => {
   const { loading, error, data } = useQuery(GET_ALL_QUIZZES);
   let render;
@@ -24,7 +24,7 @@ const Mainfeed = () => {
   }
 
   return (
-    <div>
+    <div id="feed">
       <Header />
       {render}
       <Footer />
