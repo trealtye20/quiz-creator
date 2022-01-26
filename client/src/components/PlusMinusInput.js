@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./PlusMinus.css"
 
-const PlusMinusInput = ({props}) => {
+const PlusMinusInput = ({buttonHandlers}) => {
     return (
     <div className="def-number-input number-input">
-        <button onClick={props.decreaseHandler} className="minus"></button>
-        <button onClick={props.increaseHandler} className="plus"></button>
+        <button onClick={buttonHandlers.decreaseHandler} className="minus"></button>
+        <button onClick={buttonHandlers.increaseHandler} className="plus"></button>
     </div>
     );
 }

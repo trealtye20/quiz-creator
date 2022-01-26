@@ -17,13 +17,11 @@ const QuizForm = () => {
   return (
     <Form>
         <Form.Group className="mb-3" controlId="formBasicTitle">
-            <Form.Label>Title</Form.Label>
             <Form.Control type="text" placeholder="Enter quiz title" />
         </Form.Group>
-        {questions}
-        <PlusMinusInput props={{decreaseHandler: onRemoveQuestion, increaseHandler: onAddQuestions}}/>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
+        <Form.Group>
+            {questions}
+            <PlusMinusInput buttonHandlers={{decreaseHandler: onRemoveQuestion, increaseHandler: onAddQuestions}}/>
         </Form.Group>
         <Button variant="primary" type="submit">
             Submit
