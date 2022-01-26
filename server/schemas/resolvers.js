@@ -5,12 +5,12 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    user: async (args) => {
+    user: async (_parents, args) => {
       console.log("Resolver: User Query");
       const user = await User.findOne({ _id: args._id }).populate("quizzes")
       return user;
     },
-    quiz: async (args) => {
+    quiz: async (_parents, args) => {
       console.log("Resolver: Quiz Query");
       const quiz = await Quiz.findOne({ _id: args._id });
       return quiz;
@@ -32,9 +32,10 @@ const resolvers = {
       if (!context.user){
         return new AuthenticationError("Please login.")
       }
+      console.log(args)
       const quiz = await Quiz.create(
       {
-        args, 
+        ...args, 
         creator: context.user._id
       });
       User.findOneAndUpdate(

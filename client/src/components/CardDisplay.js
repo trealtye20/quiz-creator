@@ -5,12 +5,14 @@ import Button from 'react-bootstrap/Button';
 import "./CardDisplay.css";
 
 function CardDisplay({data}) {
+  console.log(`CardDisplay: ${JSON.stringify(data, null, 2)}`);
   const onClickHandler = (e) => {
     e.preventDefault();
     console.log(e.target.tagName)
     if (!e.target.tagName === "A") {return;}
     //Redirect to quiz page
     //<ReactComponent props={data} />
+    window.location.assign("/takequiz/" + data._id)
   }
   return (
     <Card
