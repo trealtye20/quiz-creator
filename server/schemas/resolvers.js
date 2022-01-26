@@ -10,7 +10,7 @@ const resolvers = {
       const user = await User.findOne({ _id: args._id }).populate("quizzes")
       return user;
     },
-    quiz: async (_parent, args) => {
+    quiz: async (_parents, args) => {
       console.log("Resolver: Quiz Query");
       const quiz = await Quiz.findOne({ _id: args._id });
       return quiz;
