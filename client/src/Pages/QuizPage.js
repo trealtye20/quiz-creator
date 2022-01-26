@@ -24,7 +24,7 @@ function QuizPage() {
   }
   return (
     
-    <div>
+    <div id="quizzes">
       <Header/>
       {renderApp()}
       <Footer />
