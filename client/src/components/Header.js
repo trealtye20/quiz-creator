@@ -28,7 +28,7 @@ function Header() {
       <h1>❓Welcome to the quiz Taker❓</h1>
       <Navbar>
         <Navbar.Brand href="/mainfeed" id="text">
-          Quiz-Creator
+          Quiz-Taker
         </Navbar.Brand>
         <Nav>
           <Nav.Link href="/mainfeed" id="text">Home</Nav.Link>
