@@ -37,11 +37,13 @@ Tyrese Exantus
 
 [GithubRepo](https://github.com/trealtye20/quiz-creator)
 
-[DeployedSite](heroku.com)
+[DeployedSite](https://quiz-taker-kg.herokuapp.com/)
 
 ## ScreenShots:
 
-![Quiz Creator Login/Logout](place image path here)
+![Quiz Creator Login/Logout](loginpic.jpg)
+![Quiz Creator quiz question](quiz1.png)
+![Quiz Creator quiz score](scorepic.jpg)
 
 
 
